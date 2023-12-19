@@ -1,1 +1,89 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #fff; /* White background for the header */
+    color: #333; /* Text color in the header */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container{
+    margin: 40px;
+}
+.section {
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 20px; /* Added spacing between sections */
+    background-color: #ccc; /* Gray colored boxes */
+    border: 1px solid #000; /* Black border for each box */
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+/* Adding background colors for section names */
+.section:nth-child(1) .section-title {
+    background-color: orange;
+    color: #fff;
+}
+
+.section:nth-child(2) .section-title {
+    background-color: red;
+    color: #fff;
+}
+
+.section:nth-child(3) .section-title {
+    background-color: pink;
+    color: black;
+}
+
+/* Desktop view */
+@media only screen and (min-width: 992px) {
+    .section {
+        width: calc(33.33% - 20px); /* Adjusted width to include margin */
+        float: left;
+        margin-right: 20px; /* Added spacing between sections */
+    }
+
+    .section:last-child {
+        margin-right: 0; /* Remove margin from the last section */
+    }
+}
+
+/* Tablet view */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: calc(50% - 20px);
+        float: left;
+        margin-right: 20px;
+    }
+
+    .section:last-child {
+        width: calc(100% - 20px);
+        margin-right: 0;
+        clear: both;
+    }
+}
+
+/* Mobile view */
+@media only screen and (max-width: 767px) {
+    .section {
+        width: calc(100% - 20px); /* Adjusted width to include left and right margin */
+        float: none;
+        margin: 0 10px 20px; /* Added margin to both left and right for gap */
+    }
+}
 
